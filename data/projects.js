@@ -48,8 +48,8 @@ export const projects = [
       "Working contact form via Web3Forms, with spam protection and graceful error fallback",
       "Full responsive, accessibility (WCAG-compliant contrast, keyboard nav, reduced motion), and performance review",
     ],
-    liveUrl: "https://your-portfolio-domain.vercel.app/",
-    githubUrl: "https://github.com/rohanlakade/portfolio",
+    liveUrl: "https://portfolio-website-rohanlakade.vercel.app/",
+    githubUrl: "https://github.com/RohanLakade/portfolio-website",
     featured: true,
   },
 ];
