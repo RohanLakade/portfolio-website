@@ -1,0 +1,181 @@
+@use "../../styles/variables" as *;
+@use "../../styles/mixins" as *;
+
+.contact {
+  padding: $space-2xl $space-lg;
+  max-width: $bp-wide;
+  margin: 0 auto;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: $space-2xl;
+}
+
+.heading {
+  font-size: $font-2xl;
+  font-weight: 700;
+  color: var(--color-text);
+
+  @include respond(desktop) {
+    font-size: 2.5rem;
+  }
+}
+
+.accent {
+  color: var(--color-primary);
+}
+
+.accentLine {
+  width: 60px;
+  height: 3px;
+  background-color: var(--color-primary);
+  margin: $space-sm auto 0;
+  border-radius: 2px;
+}
+
+.grid {
+  display: flex;
+  flex-direction: column;
+  gap: $space-2xl;
+
+  @include respond(desktop) {
+    flex-direction: row;
+  }
+}
+
+.info,
+.form {
+  flex: 1;
+}
+
+.infoHeading {
+  font-size: $font-lg;
+  font-weight: 700;
+  color: var(--color-text);
+  margin-bottom: $space-md;
+}
+
+.infoText {
+  font-size: $font-base;
+  color: var(--color-text-muted);
+  line-height: 1.7;
+  margin-bottom: $space-lg;
+}
+
+.detailItem {
+  display: flex;
+  align-items: center;
+  gap: $space-sm;
+  color: var(--color-text-muted);
+  margin-bottom: $space-md;
+
+  a {
+    color: var(--color-text-muted);
+    transition: color 0.2s ease;
+
+    &:hover {
+      color: var(--color-primary);
+    }
+  }
+}
+
+.socials {
+  display: flex;
+  gap: $space-lg;
+  margin-top: $space-lg;
+}
+
+.socials a {
+  color: var(--color-text-muted);
+  transition: color 0.2s ease;
+
+  &:hover {
+    color: var(--color-primary);
+  }
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: $space-md;
+}
+
+.honeypot {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+  height: 0;
+  width: 0;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: $space-xs;
+}
+
+.label {
+  font-size: $font-sm;
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+.input,
+.textarea {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  padding: $space-sm $space-md;
+  color: var(--color-text);
+  font-size: $font-base;
+  font-family: inherit;
+  transition: border-color 0.2s ease;
+
+  &:focus {
+    outline: none;
+    border-color: var(--color-primary);
+  }
+}
+
+.textarea {
+  resize: vertical;
+}
+
+.submitBtn {
+  background-color: var(--color-primary);
+  color: #ffffff;
+  padding: $space-md $space-2xl;
+  border-radius: 8px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition:
+    opacity 0.2s ease,
+    transform 0.2s ease;
+
+  &:hover:not(:disabled) {
+    opacity: 0.9;
+    transform: translateY(-2px);
+  }
+
+  &:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+}
+
+.successMsg {
+  color: var(--color-primary);
+  font-size: $font-sm;
+  font-weight: 600;
+}
+
+.errorMsg {
+  color: #dc2626;
+  font-size: $font-sm;
+
+  a {
+    text-decoration: underline;
+  }
+}

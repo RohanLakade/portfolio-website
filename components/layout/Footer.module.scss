@@ -1,0 +1,131 @@
+@use '../../styles/variables' as *;
+@use '../../styles/mixins' as *;
+
+.footer {
+  background-color: var(--color-surface);
+  border-top: 1px solid var(--color-border);
+  padding: $space-2xl $space-lg $space-lg;
+  margin-top: $space-2xl;
+}
+
+.top {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: $space-xl;
+  max-width: $bp-wide;
+  margin: 0 auto;
+  padding-bottom: $space-xl;
+
+  @include respond(tablet) {
+    grid-template-columns: 2fr 1fr 1fr;
+  }
+}
+
+.logo {
+  font-size: $font-lg;
+  font-weight: 700;
+  color: var(--color-text);
+}
+
+.accent {
+  color: var(--color-primary);
+}
+
+.tagline {
+  font-size: $font-sm;
+  color: var(--color-text-muted);
+  margin: $space-sm 0 $space-md;
+  max-width: 320px;
+}
+
+.socials {
+  display: flex;
+  gap: $space-md;
+}
+
+.socials a {
+  color: var(--color-text-muted);
+  transition: color 0.2s ease;
+
+  &:hover {
+    color: var(--color-primary);
+  }
+}
+
+.linksTitle {
+  font-size: $font-sm;
+  font-weight: 700;
+  color: var(--color-text);
+  margin-bottom: $space-md;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.links ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: $space-sm;
+}
+
+.links a {
+  font-size: $font-sm;
+  color: var(--color-text-muted);
+  transition: color 0.2s ease;
+
+  &:hover {
+    color: var(--color-primary);
+  }
+}
+
+.contact a {
+  display: block;
+  font-size: $font-sm;
+  color: var(--color-text-muted);
+  margin-bottom: $space-sm;
+  transition: color 0.2s ease;
+
+  &:hover {
+    color: var(--color-primary);
+  }
+}
+
+.location {
+  font-size: $font-sm;
+  color: var(--color-text-muted);
+}
+
+.bottom {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: $space-sm;
+  max-width: $bp-wide;
+  margin: 0 auto;
+  padding-top: $space-lg;
+  border-top: 1px solid var(--color-border);
+  text-align: center;
+
+  @include respond(tablet) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.copyright {
+  font-size: $font-sm;
+  color: var(--color-text-muted);
+}
+
+.backToTop {
+  display: inline-flex;
+  align-items: center;
+  gap: $space-xs;
+  font-size: $font-sm;
+  font-weight: 600;
+  color: var(--color-primary);
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+}

@@ -1,0 +1,154 @@
+@use '../../styles/variables' as *;
+@use '../../styles/mixins' as *;
+
+.about {
+  padding: $space-2xl $space-lg;
+  max-width: $bp-wide;
+  margin: 0 auto;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: $space-2xl;
+}
+
+.heading {
+  font-size: $font-2xl;
+  font-weight: 700;
+  color: var(--color-text);
+
+  @include respond(desktop) {
+    font-size: 2.5rem;
+  }
+}
+
+.accent {
+  color: var(--color-primary);
+}
+
+.accentLine {
+  width: 60px;
+  height: 3px;
+  background-color: var(--color-primary);
+  margin: $space-sm auto 0;
+  border-radius: 2px;
+}
+
+.grid {
+  display: flex;
+  flex-direction: column;
+  gap: $space-2xl;
+  align-items: center;
+
+  @include respond(desktop) {
+    flex-direction: row;
+    align-items: stretch;
+  }
+}
+
+.imageWrapper {
+  position: relative;
+  width: 100%;
+  max-width: 380px;
+  aspect-ratio: 4 / 5;
+  border-radius: 12px;
+  overflow: hidden;
+  flex-shrink: 0;
+
+  @include respond(desktop) {
+    flex: 0 0 380px;
+  }
+}
+
+.image {
+  object-fit: cover;
+}
+
+.content {
+  flex: 1;
+  text-align: center;
+
+  @include respond(desktop) {
+    text-align: left;
+  }
+}
+
+.subheading {
+  font-size: $font-lg;
+  font-weight: 600;
+  color: var(--color-text);
+  margin-bottom: $space-md;
+}
+
+.text {
+  font-size: $font-base;
+  color: var(--color-text-muted);
+  line-height: 1.7;
+  margin-bottom: $space-xl;
+}
+
+.facts {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: $space-lg;
+  margin-bottom: $space-xl;
+  text-align: left;
+}
+
+.fact {
+  display: flex;
+  align-items: flex-start;
+  gap: $space-sm;
+}
+
+.factIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  background-color: var(--color-surface);
+  color: var(--color-text-muted);
+  flex-shrink: 0;
+}
+
+.factIconHighlight {
+  background-color: var(--color-primary);
+  color: #ffffff;
+}
+
+.factBody {
+  display: flex;
+  flex-direction: column;
+}
+
+.factLabel {
+  font-size: $font-sm;
+  color: var(--color-text-muted);
+}
+
+.factValue {
+  font-size: $font-base;
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+.factValueHighlight {
+  color: var(--color-primary);
+}
+
+.resumeBtn {
+  display: inline-block;
+  background-color: var(--color-primary);
+  color: #ffffff;
+  padding: $space-md $space-2xl;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+
+  &:hover {
+    opacity: 0.9;
+    transform: translateY(-2px);
+  }
+}

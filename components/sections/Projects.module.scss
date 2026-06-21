@@ -1,0 +1,154 @@
+@use "../../styles/variables" as *;
+@use "../../styles/mixins" as *;
+
+.projects {
+  padding: $space-2xl $space-lg;
+  max-width: $bp-wide;
+  margin: 0 auto;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: $space-2xl;
+}
+
+.heading {
+  font-size: $font-2xl;
+  font-weight: 700;
+  color: var(--color-text);
+
+  @include respond(desktop) {
+    font-size: 2.5rem;
+  }
+}
+
+.accent {
+  color: var(--color-primary);
+}
+
+.accentLine {
+  width: 60px;
+  height: 3px;
+  background-color: var(--color-primary);
+  margin: $space-sm auto 0;
+  border-radius: 2px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: $space-xl;
+  justify-content: center;
+
+  @include respond(tablet) {
+    grid-template-columns: repeat(2, minmax(0, 420px));
+  }
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 420px;
+  margin: 0 auto;
+  background-color: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    border-color 0.2s ease;
+
+  &:hover {
+    transform: translateY(-4px);
+    border-color: var(--color-primary);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+  }
+}
+
+.imageWrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background-color: var(--color-bg);
+}
+
+.image {
+  object-fit: cover;
+}
+
+.cardHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: $space-md $space-md 0;
+}
+
+.title {
+  font-size: $font-lg;
+  font-weight: 700;
+  color: var(--color-text);
+}
+
+.cardLinks {
+  display: flex;
+  gap: $space-sm;
+}
+
+.cardLinks a {
+  color: var(--color-text-muted);
+  transition: color 0.2s ease;
+
+  &:hover {
+    color: var(--color-primary);
+  }
+}
+
+.description {
+  font-size: $font-sm;
+  color: var(--color-text-muted);
+  line-height: 1.6;
+  padding: $space-sm $space-md 0;
+}
+
+.techStack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: $space-sm;
+  list-style: none;
+  padding: $space-sm $space-md 0;
+}
+
+.tag {
+  font-size: $font-sm;
+  color: var(--color-text-muted);
+  background-color: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+  padding: $space-xs $space-sm;
+}
+
+.features {
+  list-style: disc;
+  padding: $space-sm $space-md 0 $space-xl;
+  color: var(--color-text-muted);
+  font-size: $font-sm;
+  line-height: 1.6;
+  margin-bottom: $space-sm;
+}
+
+.detailLink {
+  display: inline-block;
+  margin: $space-md;
+  margin-top: $space-xs;
+  font-weight: 600;
+  font-size: $font-sm;
+  color: var(--color-primary);
+  transition: transform 0.2s ease;
+
+  &:hover {
+    transform: translateX(4px);
+  }
+}

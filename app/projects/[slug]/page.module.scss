@@ -1,0 +1,124 @@
+@use '../../../styles/variables' as *;
+@use '../../../styles/mixins' as *;
+
+.page {
+  padding: $space-2xl $space-lg;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.backLink {
+  display: inline-flex;
+  align-items: center;
+  gap: $space-sm;
+  color: var(--color-text-muted);
+  font-size: $font-sm;
+  margin-bottom: $space-xl;
+  transition: color 0.2s ease;
+
+  &:hover {
+    color: var(--color-primary);
+  }
+}
+
+.title {
+  font-size: $font-3xl;
+  font-weight: 800;
+  color: var(--color-text);
+  margin-bottom: $space-md;
+}
+
+.description {
+  font-size: $font-lg;
+  color: var(--color-text-muted);
+  line-height: 1.6;
+  margin-bottom: $space-lg;
+}
+
+.links {
+  display: flex;
+  gap: $space-md;
+  flex-wrap: wrap;
+  margin-bottom: $space-2xl;
+}
+
+.primaryLink,
+.secondaryLink {
+  display: inline-flex;
+  align-items: center;
+  gap: $space-sm;
+  padding: $space-sm $space-lg;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: $font-sm;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+
+  &:hover {
+    transform: translateY(-2px);
+  }
+}
+
+.primaryLink {
+  background-color: var(--color-primary);
+  color: #ffffff;
+
+  &:hover {
+    opacity: 0.9;
+  }
+}
+
+.secondaryLink {
+  border: 1.5px solid var(--color-border);
+  color: var(--color-text);
+}
+
+.imageWrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: 12px;
+  overflow: hidden;
+  background-color: var(--color-surface);
+  margin-bottom: $space-2xl;
+}
+
+.image {
+  object-fit: cover;
+}
+
+.section {
+  margin-bottom: $space-xl;
+}
+
+.sectionHeading {
+  font-size: $font-lg;
+  font-weight: 700;
+  color: var(--color-text);
+  margin-bottom: $space-md;
+}
+
+.techStack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: $space-sm;
+  list-style: none;
+}
+
+.tag {
+  font-size: $font-sm;
+  color: var(--color-text-muted);
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+  padding: $space-xs $space-sm;
+}
+
+.featureList {
+  list-style: disc;
+  padding-left: $space-xl;
+  color: var(--color-text-muted);
+  line-height: 1.8;
+}
