@@ -85,7 +85,7 @@ export default function About() {
           </div>
 
           <a
-            href="/resume.pdf"
+            href="/Rohan_Lakade_Resume.pdf"
             download="Rohan_Lakade_Resume.pdf"
             className={styles.resumeBtn}
           >
