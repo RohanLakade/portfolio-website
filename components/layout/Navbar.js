@@ -39,8 +39,7 @@ export default function Navbar() {
         <div className={styles.desktopActions}>
           <a
             href="/resume.pdf"
-            target="_blank"
-            rel="noopener noreferrer"
+            download="Rohan_Lakade_Resume.pdf"
             className={styles.resumeButton}
           >
             Resume
@@ -69,8 +68,7 @@ export default function Navbar() {
           <div className={styles.mobileActions}>
             <a
               href="/resume.pdf"
-              target="_blank"
-              rel="noopener noreferrer"
+              download="Rohan_Lakade_Resume.pdf"
               className={styles.resumeButton}
               onClick={closeMenu}
             >

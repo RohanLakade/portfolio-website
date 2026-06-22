@@ -1,5 +1,5 @@
-@use '../../styles/variables' as *;
-@use '../../styles/mixins' as *;
+@use "../../styles/variables" as *;
+@use "../../styles/mixins" as *;
 
 .skills {
   padding: $space-2xl $space-lg;
@@ -38,13 +38,11 @@
   display: grid;
   grid-template-columns: 1fr;
   gap: $space-lg;
+  max-width: 800px;
+  margin: 0 auto;
 
   @include respond(tablet) {
     grid-template-columns: repeat(2, 1fr);
-  }
-
-  @include respond(desktop) {
-    grid-template-columns: repeat(4, 1fr);
   }
 }
 
@@ -53,7 +51,9 @@
   border: 1px solid var(--color-border);
   border-radius: 12px;
   padding: $space-lg;
-  transition: transform 0.2s ease, border-color 0.2s ease;
+  transition:
+    transform 0.2s ease,
+    border-color 0.2s ease;
 
   &:hover {
     transform: translateY(-4px);

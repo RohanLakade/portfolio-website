@@ -1,18 +1,10 @@
 export const skillGroups = [
   {
-    category: "Languages & Frameworks",
-    items: ["JavaScript", "React.js", "Next.js", "Redux Toolkit", "React Router", "Node.js", "Express.js"],
+    category: "Core / Hands-on",
+    items: ["JavaScript", "React.js", "Next.js", "Redux Toolkit", "React Router", "HTML", "CSS", "SCSS", "Bootstrap", "Git", "GitHub"],
   },
   {
-    category: "Styling",
-    items: ["HTML", "CSS", "SCSS", "Bootstrap", "Material UI", "Tailwind CSS"],
-  },
-  {
-    category: "Backend & Data",
-    items: ["MySQL", "MongoDB", "JSON Web Token", "bcrypt"],
-  },
-  {
-    category: "Tools",
-    items: ["Git", "GitHub", "JIRA", "Figma"],
+    category: "Other Skills (Basic Knowledge)",
+    items: ["Node.js", "Express.js", "MySQL", "MongoDB", "JSON Web Token", "bcrypt", "Material UI", "Tailwind CSS", "JIRA", "Figma"],
   },
 ];

@@ -86,8 +86,7 @@ export default function About() {
 
           <a
             href="/resume.pdf"
-            target="_blank"
-            rel="noopener noreferrer"
+            download="Rohan_Lakade_Resume.pdf"
             className={styles.resumeBtn}
           >
             Download Resume
