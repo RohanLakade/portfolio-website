@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 import ThemeToggle from "@/components/layout/ThemeToggle";
 import styles from "./Navbar.module.scss";
@@ -16,6 +16,13 @@ const navLinks = [
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+
+  useEffect(() => {
+    document.body.style.overflow = isOpen ? "hidden" : "";
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [isOpen]);
 
   function closeMenu() {
     setIsOpen(false);
@@ -55,6 +62,13 @@ export default function Navbar() {
           {isOpen ? <FaTimes size={20} /> : <FaBars size={20} />}
         </button>
 
+        {isOpen && (
+          <div
+            className={styles.backdrop}
+            onClick={closeMenu}
+            aria-hidden="true"
+          />
+        )}
         <div className={`${styles.mobileMenu} ${isOpen ? styles.open : ""}`}>
           <ul className={styles.links}>
             {navLinks.map((link) => (
